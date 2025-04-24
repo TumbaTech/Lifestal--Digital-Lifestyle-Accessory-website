@@ -223,6 +223,16 @@ body{
     opacity: 0.3;
 } */
 
+.footer{
+    text-align: center;
+    margin-top: 50px;
+    font-size: large;
+    font-weight: 600;
+    background-color: #333;
+    padding: 25px;
+    color: #fff;
+}
+
 
 /* Styles for shop page */
 #shop-section{

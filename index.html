@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Layout</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px; /* collapsed width */
+  height: 100vh;
+  background-color: #f5f5ff;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 250px; /* expanded width */
+}
+
+.main-content {
+  margin-left: 80px; /* same as collapsed sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 250px; /* shift content when sidebar expands */
+}
+
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="nav-item">🏠 Home</div>
+    <div class="nav-item">📄 Documents</div>
+    <div class="nav-item">⚙️ Settings</div>
+  </div>
+  <div class="main-content">
+    <h1>Welcome</h1>
+    <p >This content resizes smoothly when the sidebar changes width.</p>
+   
+   
+  </div>
+</body>
+</html>
